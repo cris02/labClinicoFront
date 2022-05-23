@@ -4,7 +4,7 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import {FormsModule} from "@angular/forms";
-import {ServiceService} from "./Service/service.service";
+import {ServiceService} from "./views/reportes/Service/service.service";
 import {HttpClientModule} from "@angular/common/http";
 
 import {

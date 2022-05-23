@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
-import {ServiceService} from "../../../Service/service.service";
-import {Factura} from "../../../Modelo/Factura";
+import {ServiceService} from "../Service/service.service";
+import {Factura} from "../Modelo/Factura";
 
 
 @Component({
