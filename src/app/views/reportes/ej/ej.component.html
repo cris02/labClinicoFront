@@ -1,0 +1,31 @@
+<h3 align="center">EJEMPLO DE REPORTE</h3> <button class="btn-secondary">Exportar</button>
+<hr>
+
+<div class="container">
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Fecha</th>
+        <th>Estado</th>
+        <th>Comentario</th>
+        <th>Tipo de Factura</th>
+        <th>fkFactura</th>
+        <th>foto</th>
+       </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let factura of facturas">
+        <td>{{factura.id}}</td>
+        <td>{{factura.fecha}}</td>
+        <td>{{factura.estado}}</td>
+        <td>{{factura.comentario}}</td>
+        <td></td>
+        <td></td>
+        <td>{{factura.foto}}</td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>
