@@ -3,13 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonGroupsComponent } from './button-groups/button-groups.component';
-import { DropdownsComponent } from './dropdowns/dropdowns.component';
 
 const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Buttons'
+      title: 'Menu 2'
     },
     children: [
       {
@@ -29,14 +28,7 @@ const routes: Routes = [
         data: {
           title: 'Button groups'
         }
-      },
-      {
-        path: 'dropdowns',
-        component: DropdownsComponent,
-        data: {
-          title: 'Dropdowns'
-        }
-      },
+      }
     ]
   }
 ];
