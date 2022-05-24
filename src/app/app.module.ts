@@ -49,6 +49,7 @@ import {
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { EjComponent } from './views/reportes/ej/ej.component';
+import { PacientesComponent } from './views/pacientes/pacientes.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
