@@ -1,0 +1,20 @@
+<h3 align="center">REPORTES GENERALES</h3>
+<button class="btn btn-primary" (click)="exportExcel()">Exportar a Excel</button>
+<hr>
+
+<div>
+  Seleccione la tabla para adicionar al reporte:
+  <form #formulario="ngForm" (ngSubmit)="llenarTabla(datos,'excelDataTable')">
+    <select name="miselect" (ngModelChange)="Consultar($event)" [(ngModel)]="name">
+    <option [value]="item" *ngFor="let item of lista">{{item}}</option>
+    </select>
+     <button class="btn btn-warning" type="submit"> ENVIAR</button>
+      <button class="btn btn-danger" (click)="vaciarTabla()"> ELIMINAR</button>
+  </form>
+
+</div>
+
+
+<div class="container">
+  <table id="excelDataTable" class="table table-hover table-bordered table-dark"></table>
+</div>

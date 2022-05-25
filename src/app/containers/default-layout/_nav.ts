@@ -71,16 +71,16 @@ export const navItems: INavData[] = [
     iconComponent: { name: 'cil-notes' },
     children: [
       {
-        name: 'reportes 1',
-        url: '/reportes/ej'
+        name: 'Reportes Generales',
+        url: '/reportes/reportesGenerales'
       },
       {
-        name: 'reportes 2',
-        url: '/reportes/reportes2'
+        name: 'Reportes Estadisticos',
+        url: '/reportes/reportesEstadisticos'
       },
             {
-        name: 'reportes 3',
-        url: '/reportes/reportes3'
+        name: 'ReportesMedicos',
+        url: '/reportes/reportesMedicos'
       }
     ]
   },

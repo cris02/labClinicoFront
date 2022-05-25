@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 
-import { EjComponent } from './ej/ej.component';
-
+import { ReportesGeneralesComponent } from './reportesGenerales/reportesGenerales.component';
+import { ReporteGComponent } from './reporteG/reporteG.component';
 
 
 const routes: Routes = [
@@ -18,10 +18,17 @@ const routes: Routes = [
         redirectTo: 'reportes',
       },
       {
-        path: 'ej',
-        component: EjComponent,
+        path: 'reportesGenerales',
+        component: ReportesGeneralesComponent,
         data: {
           title: 'Ejemplo',
+        },
+      },
+      {
+        path: 'reporteg:id',
+        component: ReporteGComponent,
+        data: {
+          title: 'Reporte General',
         },
       },
     ],

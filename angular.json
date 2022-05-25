@@ -37,7 +37,7 @@
             "styles": [
               "src/scss/styles.scss"
             ],
-            "scripts": [],
+            "scripts": ["./node_modules/jquery/dist/jquery.js"],
             "allowedCommonJsDependencies": [
               "chart.js",
               "@coreui/chartjs/dist/js/coreui-chartjs.js"

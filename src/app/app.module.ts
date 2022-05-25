@@ -48,7 +48,7 @@ import {
 } from '@coreui/angular';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
-import { EjComponent } from './views/reportes/ej/ej.component';
+import { ReportesGeneralesComponent } from './views/reportes/reportesGenerales/reportesGenerales.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
