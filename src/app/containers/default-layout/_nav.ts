@@ -79,7 +79,7 @@ export const navItems: INavData[] = [
         url: '/reportes/reportesEstadisticos'
       },
             {
-        name: 'ReportesMedicos',
+        name: 'Reportes Medicos',
         url: '/reportes/reportesMedicos'
       }
     ]
