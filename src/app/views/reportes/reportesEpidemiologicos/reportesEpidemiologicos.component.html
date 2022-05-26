@@ -1,0 +1,30 @@
+<h3 align="center">REPORTES EPIDEMIOLÓGICOS</h3>
+<button class="btn btn-primary" (click)="exportExcel()">Exportar a Excel</button>
+<hr>
+
+
+<div class="container">
+  <table id="excelDataTable" class="table table-hover table-bordered table-dark">
+    <thead>
+    <tr>
+      <th style="width: 30%;">Departamento</th>
+      <th>Municipio</th>
+      <th style="width: 15%">No.Pacientes</th>
+      <th style="width: 15%">No.Exam. Colesterol</th>
+      <th style="width: 15%">No.Exam. Acido Urico</th>
+      <th style="width: 15%">No.Exam. Glucosa</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let municipio of municipios;let indice=index">
+      <td>{{municipio.id_depto}}</td>
+      <td>{{municipio.id_municipio}}</td>
+      <td>{{cantP[indice]}}</td>
+      <td>{{cantEC[indice]}}</td>
+      <td>{{cantEAU[indice]}}</td>
+      <td>{{cantEG[indice]}}</td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>

@@ -1,8 +1,6 @@
 import {Component} from '@angular/core';
 import {Router} from "@angular/router";
 import {ServiceService} from "../Service/service.service";
-import {Factura} from "../Modelo/Factura";
-import {TipoFactura} from "../Modelo/TipoFactura";
 import {Dato} from "../Modelo/Dato";
 import * as FileSaver from 'file-saver';
 import * as $ from 'jquery';
@@ -17,10 +15,6 @@ export class ReportesGeneralesComponent {
   // @ts-ignore
   name:string;
   lista:string[]=["facturasp/","tipofactura/"];
-  // @ts-ignore
-  facturas:Factura[];
-  // @ts-ignore
-  tipofactura:TipoFactura[];
   // @ts-ignore
   datos: Dato[];
 

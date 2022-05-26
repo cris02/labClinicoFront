@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 // views
 import { ReportesGeneralesComponent } from './reportesGenerales/reportesGenerales.component';
+import { ReportesEpidemiologicosComponent} from './reportesEpidemiologicos/reportesEpidemiologicos.component'
 
 // Components Routing
 import { ReportesRoutingModule } from './reportes-routing.module';
 import { ReporteGComponent } from './reporteG/reporteG.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
 
 @NgModule({
   imports: [
@@ -19,6 +21,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
   declarations: [
     ReportesGeneralesComponent,
     ReporteGComponent,
+    ReportesEpidemiologicosComponent,
 
   ],
 })

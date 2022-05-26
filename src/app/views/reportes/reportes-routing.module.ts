@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { ReportesGeneralesComponent } from './reportesGenerales/reportesGenerales.component';
-import { ReporteGComponent } from './reporteG/reporteG.component';
+import { ReportesEpidemiologicosComponent } from './reportesEpidemiologicos/reportesEpidemiologicos.component';
 
 
 const routes: Routes = [
@@ -21,14 +21,14 @@ const routes: Routes = [
         path: 'reportesGenerales',
         component: ReportesGeneralesComponent,
         data: {
-          title: 'Ejemplo',
+          title: 'Reportes Generales',
         },
       },
       {
-        path: 'reporteg:id',
-        component: ReporteGComponent,
+        path: 'reportesEpidemiologicos',
+        component: ReportesEpidemiologicosComponent,
         data: {
-          title: 'Reporte General',
+          title: 'Reporte Epidemiologicos',
         },
       },
     ],

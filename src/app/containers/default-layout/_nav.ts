@@ -75,12 +75,16 @@ export const navItems: INavData[] = [
         url: '/reportes/reportesGenerales'
       },
       {
+        name: 'Reportes Examenes Clinicos',
+        url: '/reportes/reportesExamenesClinicos'
+      },
+            {
         name: 'Reportes Estadisticos',
         url: '/reportes/reportesEstadisticos'
       },
-            {
-        name: 'Reportes Medicos',
-        url: '/reportes/reportesMedicos'
+       {
+        name: 'Reportes Epidemiológicos',
+        url: '/reportes/reportesEpidemiologicos'
       }
     ]
   },
