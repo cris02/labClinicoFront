@@ -14,7 +14,7 @@ import * as $ from 'jquery';
 export class ReportesGeneralesComponent {
   // @ts-ignore
   name:string;
-  lista:string[]=["facturasp/","tipofactura/"];
+  lista:string[]=["Pais","Departamento","Municipio","ETC(Llenar Lista)"];
   // @ts-ignore
   datos: Dato[];
 

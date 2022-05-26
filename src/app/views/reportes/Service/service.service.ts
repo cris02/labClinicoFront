@@ -12,12 +12,12 @@ export class ServiceService {
 
   constructor(private http:HttpClient) { }
 
-  Url='http://127.0.0.1:8000/facturas/';
+  UrlG='http://127.0.0.1:8000/rpt/';
   Url2='';
   Url3='';
 
   getReporte(param: string){
-    return this.http.get<Dato[]>(this.Url+param);
+    return this.http.get<Dato[]>(this.UrlG+param.toLowerCase()+'/');
   }
 
   getPersonasTrigliceridosAltos(){
