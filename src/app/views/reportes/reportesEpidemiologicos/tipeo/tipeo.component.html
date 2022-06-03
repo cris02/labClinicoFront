@@ -1,0 +1,27 @@
+<h2 align="center">Tipos de sangre</h2>
+<div class="container">
+  <table class="table table-hover table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <td>Pais</td>
+        <td>Departamento</td>
+        <td>Municipio</td>
+        <td>Tipo A</td>
+        <td>Tipo B</td>
+        <td>Tipo O</td>
+        <td>Tipo AB</td>
+      </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let persona of datos">
+        <td>{{persona.id_pais}}</td>
+        <td>{{persona.id_depto}}</td>
+        <td>{{persona.id_municipio}}</td>
+        <td>{{persona.tipoA}}</td>
+        <td>{{persona.tipoB}}</td>
+        <td>{{persona.tipoO}}</td>
+        <td>{{persona.tipoAB}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

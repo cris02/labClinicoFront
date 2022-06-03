@@ -1,0 +1,13 @@
+<h3 align="center">REPORTES EPIDEMIOLOGICOS</h3>
+<hr>
+<div>
+  Seleccione el reporte:
+  <form  (ngSubmit)="navegar(name)">
+    <select name="miselect"  [(ngModel)]="name">
+    <option [value]="item" *ngFor="let item of lista">{{item}}</option>
+    </select>
+      <button style="margin-left: 10px" class="btn btn-warning" type="submit">CONSULTAR</button>
+  </form>
+
+
+</div>

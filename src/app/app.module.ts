@@ -6,6 +6,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {FormsModule} from "@angular/forms";
 import {ServiceService} from "./views/reportes/Service/service.service";
 import {HttpClientModule} from "@angular/common/http";
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import {
   PERFECT_SCROLLBAR_CONFIG,
@@ -50,6 +53,9 @@ import {
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { ReportesGeneralesComponent } from './views/reportes/reportesGenerales/reportesGenerales.component';
 import { PacientesComponent } from './views/pacientes/pacientes.component';
+import {
+  ExamenesPorFechaComponent
+} from "./views/reportes/reportesEstadisticos/examenes-por-fecha/examenes-por-fecha.component";
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -91,7 +97,11 @@ const APP_CONTAINERS = [
     ListGroupModule,
     CardModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
   ],
   providers: [
     {

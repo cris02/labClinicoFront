@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Dato} from "../Modelo/Dato";
-import {Paciente} from "../Modelo/Paciente";
-import {Municipio} from "../Modelo/Municipio";
-import {ExamenQuimicaClinica} from "../Modelo/ExamenQuimicaClinica";
+import {TipeoSangre} from "../Modelo/TablaTipeoSangre";
+import {TrigliceridosAltos} from "../Modelo/TablaTrigliceridosAltos";
 
 @Injectable({
   providedIn: 'root'
@@ -12,25 +11,22 @@ export class ServiceService {
 
   constructor(private http:HttpClient) { }
 
-  UrlG='http://127.0.0.1:8000/rpt/';
-  Url2='';
-  Url3='';
+  UrlG='http://127.0.0.1:8000/facturas/';
+  UrlTipeo='';
+  UrlTrigliceridos='';
 
   getReporte(param: string){
     return this.http.get<Dato[]>(this.UrlG+param.toLowerCase()+'/');
   }
 
   getPersonasTrigliceridosAltos(){
-    return this.http.get<Paciente[]>(this.Url2);
+  return this.http.get<TrigliceridosAltos[]>(this.UrlTrigliceridos);
   }
 
-    getMunicipios(){
-    return this.http.get<Municipio[]>(this.Url3);
+    getPersonasTipeoSangre(){
+  return this.http.get<TipeoSangre[]>(this.UrlTipeo);
   }
 
-    getExamenesQuimicaClinica(){
-    return this.http.get<ExamenQuimicaClinica[]>(this.Url3);
-  }
 
   // @ts-ignore
   public loadScript({id, url}) {

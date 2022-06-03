@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {ServiceService} from "../Service/service.service";
 import {Dato} from "../Modelo/Dato";
@@ -6,22 +6,25 @@ import * as FileSaver from 'file-saver';
 import * as $ from 'jquery';
 
 
+// noinspection JSJQueryEfficiency
 @Component({
   selector: 'app-reportesGenerales',
   templateUrl: './reportesGenerales.component.html',
   styleUrls: ['./reportesGenerales.component.scss']
 })
-export class ReportesGeneralesComponent {
+export class ReportesGeneralesComponent implements OnInit {
   // @ts-ignore
   name:string;
-  lista:string[]=["Pais","Departamento","Municipio","ETC(Llenar Lista)"];
+  lista:string[]=["Pais","Departamento","facturasp","ETC(Llenar Lista)"];
   // @ts-ignore
   datos: Dato[];
+  contador=0;
 
   constructor(private service:ServiceService,private router:Router) {}
 
     vaciarTabla(){
      location.reload()
+
   }
 
   // @ts-ignore
@@ -32,14 +35,17 @@ export class ReportesGeneralesComponent {
   if (misDatos.length > 0) {
     claves = Object.keys(misDatos[0]);
     let fila = document.createElement("tr");
+    fila.classList.add('cab');
     for (let x = 0; x < claves.length; x++) {
       let celda = document.createElement("th");
       celda.textContent = claves[x];
       fila.append(celda);
     }
     // @ts-ignore
-    document.getElementById(idTabla).append(fila);
+    document.getElementById(idTabla).append(fila)
+
   }
+
   for (let x = 0; x < misDatos.length; x++) {
     let fila = document.createElement("tr");
     for (let y = 0; y < claves.length; y++) {
@@ -51,6 +57,7 @@ export class ReportesGeneralesComponent {
     // @ts-ignore
     document.getElementById(idTabla).append(fila);
   }
+
 }
 
       Consultar(par:string){
@@ -78,6 +85,25 @@ export class ReportesGeneralesComponent {
       type: EXCEL_TYPE
     });
     FileSaver.saveAs(data, fileName + '_export_' + new Date().getTime() + EXCEL_EXTENSION);
+  }
+
+  ngOnInit(): void {
+
+        this.service.loadScript({id: 'my-script', url : 'assets/js/export.js'})
+            .then(data => {
+                console.log('script loaded ', data);
+            }).catch(error => console.log(error));
+
+            this.service.loadScript({id: 'my-script', url : 'assets/js/export.min.js'})
+            .then(data => {
+                console.log('script loaded ', data);
+            }).catch(error => console.log(error));
+
+                this.service.loadScript({id: 'my-script', url : 'assets/js/filtro.js'})
+            .then(data => {
+                console.log('script loaded ', data);
+            }).catch(error => console.log(error));
+
   }
 
  }

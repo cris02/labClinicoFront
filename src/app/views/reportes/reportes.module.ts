@@ -3,12 +3,18 @@ import { NgModule } from '@angular/core';
 
 // views
 import { ReportesGeneralesComponent } from './reportesGenerales/reportesGenerales.component';
-import { ReportesEpidemiologicosComponent} from './reportesEpidemiologicos/reportesEpidemiologicos.component'
+import { ReportesEpidemiologicosComponent} from './reportesEpidemiologicos/base/reportesEpidemiologicos.component'
 
 // Components Routing
 import { ReportesRoutingModule } from './reportes-routing.module';
-import { ReporteGComponent } from './reporteG/reporteG.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { TrigliceridosComponent } from './reportesEpidemiologicos/trigliceridos/trigliceridos.component';
+import { TipeoComponent } from './reportesEpidemiologicos/tipeo/tipeo.component';
+import { ExamenesPorAreaComponent } from './reportesEstadisticos/examenes-por-area/examenes-por-area.component';
+import { TiposDeExamenesComponent } from './reportesEstadisticos/tipos-de-examenes/tipos-de-examenes.component';
+import { ExamenesPorFechaComponent } from './reportesEstadisticos/examenes-por-fecha/examenes-por-fecha.component';
+import { ExamenesZonaGeograficaComponent } from './reportesEstadisticos/examenes-zona-geografica/examenes-zona-geografica.component';
+import { ReportesEstadisticosComponent } from './reportesEstadisticos/reportesEstadisticos/reportesEstadisticos.component';
 
 
 @NgModule({
@@ -20,8 +26,14 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
   ],
   declarations: [
     ReportesGeneralesComponent,
-    ReporteGComponent,
     ReportesEpidemiologicosComponent,
+    TrigliceridosComponent,
+    TipeoComponent,
+    ExamenesPorAreaComponent,
+    TiposDeExamenesComponent,
+    ExamenesPorFechaComponent,
+    ExamenesZonaGeograficaComponent,
+    ReportesEstadisticosComponent,
 
   ],
 })

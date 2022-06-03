@@ -7,7 +7,7 @@
 // Color system
 
 // $white:     #fff;
-// $gray-base: #3c4b64;
+// $gray-reportesEstadisticos: #3c4b64;
 // $gray-100:  #ebedef;
 // $gray-200:  #d8dbe0;
 // $gray-300:  #c4c9d0;
@@ -116,9 +116,9 @@
 // scss-docs-end theme-colors-map
 
 // Text colors
-// $high-emphasis-dark:    rgba(shift-color($gray-base, +26), .87);
-// $medium-emphasis-dark:  rgba(shift-color($gray-base, +26), .6);
-// $disabled-dark:         rgba(shift-color($gray-base, +26), .38);
+// $high-emphasis-dark:    rgba(shift-color($gray-reportesEstadisticos, +26), .87);
+// $medium-emphasis-dark:  rgba(shift-color($gray-reportesEstadisticos, +26), .6);
+// $disabled-dark:         rgba(shift-color($gray-reportesEstadisticos, +26), .38);
 
 // $high-emphasis-light:    rgba($white, .87);
 // $medium-emphasis-light:  rgba($white, .6);
@@ -419,7 +419,7 @@
 // $caret-vertical-align:        $caret-width * .85;
 // $caret-spacing:               $caret-width * .85;
 
-// $transition-base:             all .2s ease-in-out;
+// $transition-reportesEstadisticos:             all .2s ease-in-out;
 // $transition-fade:             opacity .15s linear;
 // $transition-collapse:         height .35s ease;
 
@@ -442,15 +442,15 @@
 // $font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 // $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 // stylelint-enable value-keyword-case
-// $font-family-base:            var(--#{$variable-prefix}font-sans-serif);
+// $font-family-reportesEstadisticos:            var(--#{$variable-prefix}font-sans-serif);
 // $font-family-code:            var(--#{$variable-prefix}font-monospace);
 
 // $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
-// $font-size-base effects the font size of the body text
+// $font-size-reportesEstadisticos effects the font size of the body text
 // $font-size-root:              null;
-// $font-size-base:              1rem; // Assumes the browser default, typically `16px`
-// $font-size-sm:                $font-size-base * .875;
-// $font-size-lg:                $font-size-base * 1.25;
+// $font-size-reportesEstadisticos:              1rem; // Assumes the browser default, typically `16px`
+// $font-size-sm:                $font-size-reportesEstadisticos * .875;
+// $font-size-lg:                $font-size-reportesEstadisticos * 1.25;
 
 // $font-weight-lighter:         lighter;
 // $font-weight-light:           300;
@@ -460,18 +460,18 @@
 // $font-weight-bold:            700;
 // $font-weight-bolder:          bolder;
 
-// $font-weight-base:            $font-weight-normal;
+// $font-weight-reportesEstadisticos:            $font-weight-normal;
 
-// $line-height-base:            1.5;
+// $line-height-reportesEstadisticos:            1.5;
 // $line-height-sm:              1.25;
 // $line-height-lg:              2;
 
-// $h1-font-size:                $font-size-base * 2.5;
-// $h2-font-size:                $font-size-base * 2;
-// $h3-font-size:                $font-size-base * 1.75;
-// $h4-font-size:                $font-size-base * 1.5;
-// $h5-font-size:                $font-size-base * 1.25;
-// $h6-font-size:                $font-size-base;
+// $h1-font-size:                $font-size-reportesEstadisticos * 2.5;
+// $h2-font-size:                $font-size-reportesEstadisticos * 2;
+// $h3-font-size:                $font-size-reportesEstadisticos * 1.75;
+// $h4-font-size:                $font-size-reportesEstadisticos * 1.5;
+// $h5-font-size:                $font-size-reportesEstadisticos * 1.25;
+// $h6-font-size:                $font-size-reportesEstadisticos;
 
 // scss-docs-start font-sizes
 // $font-sizes: (
@@ -505,7 +505,7 @@
 // $display-line-height: $headings-line-height;
 // scss-docs-end display-headings
 
-// $lead-font-size:              $font-size-base * 1.25;
+// $lead-font-size:              $font-size-reportesEstadisticos * 1.25;
 // $lead-font-weight:            300;
 
 // $small-font-size:             .875em;
@@ -517,7 +517,7 @@
 // $initialism-font-size:        $small-font-size;
 
 // $blockquote-margin-y:         $spacer;
-// $blockquote-font-size:        $font-size-base * 1.25;
+// $blockquote-font-size:        $font-size-reportesEstadisticos * 1.25;
 // $blockquote-footer-color:     $gray-600;
 // $blockquote-footer-font-size: $small-font-size;
 
@@ -545,10 +545,10 @@
 // $mark-bg:                     #fcf8e3;
 
 // Icons
-// $icon-size-base:  1rem;
-// $icon-size-sm:    $icon-size-base * .875;
-// $icon-size-lg:    $icon-size-base * 1.25;
-// $icon-size-xl:    $icon-size-base * 1.5;
+// $icon-size-reportesEstadisticos:  1rem;
+// $icon-size-sm:    $icon-size-reportesEstadisticos * .875;
+// $icon-size-lg:    $icon-size-reportesEstadisticos * 1.25;
+// $icon-size-xl:    $icon-size-reportesEstadisticos * 1.5;
 
 
 // Tables
@@ -613,8 +613,8 @@
 // $input-btn-padding-y:         .375rem;
 // $input-btn-padding-x:         .75rem;
 // $input-btn-font-family:       null;
-// $input-btn-font-size:         $font-size-base;
-// $input-btn-line-height:       $line-height-base;
+// $input-btn-font-size:         $font-size-reportesEstadisticos;
+// $input-btn-line-height:       $line-height-reportesEstadisticos;
 
 // $input-btn-focus-width:         .25rem;
 // $input-btn-focus-color-opacity: .25;
@@ -704,7 +704,7 @@
 // $input-padding-x:                       $input-btn-padding-x;
 // $input-font-family:                     $input-btn-font-family;
 // $input-font-size:                       $input-btn-font-size;
-// $input-font-weight:                     $font-weight-base;
+// $input-font-weight:                     $font-weight-reportesEstadisticos;
 // $input-line-height:                     $input-btn-line-height;
 
 // $input-padding-y-sm:                    $input-btn-padding-y-sm;
@@ -752,7 +752,7 @@
 
 // scss-docs-start form-check-variables
 // $form-check-input-width:                  1em;
-// $form-check-min-height:                   $font-size-base * $line-height-base;
+// $form-check-min-height:                   $font-size-reportesEstadisticos * $line-height-reportesEstadisticos;
 // $form-check-padding-start:                .375em;
 // $form-check-margin-bottom:                .125rem;
 // $form-check-label-color:                  unset;
@@ -968,8 +968,8 @@
 
 // $navbar-brand-font-size:            $font-size-lg;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
-// $nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y * 2;
-// $navbar-brand-height:               $navbar-brand-font-size * $line-height-base;
+// $nav-link-height:                   $font-size-reportesEstadisticos * $line-height-reportesEstadisticos + $nav-link-padding-y * 2;
+// $navbar-brand-height:               $navbar-brand-font-size * $line-height-reportesEstadisticos;
 // $navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) / 2;
 // $navbar-brand-margin-end:           1rem;
 
@@ -1008,7 +1008,7 @@
 // $dropdown-padding-x:                0;
 // $dropdown-padding-y:                .5rem;
 // $dropdown-spacer:                   .125rem;
-// $dropdown-font-size:                $font-size-base;
+// $dropdown-font-size:                $font-size-reportesEstadisticos;
 // $dropdown-color:                    $body-color;
 // $dropdown-bg:                       $white;
 // $dropdown-border-color:             rgba($black, .15);
@@ -1242,7 +1242,7 @@
 // $modal-dialog-margin:               .5rem;
 // $modal-dialog-margin-y-sm-up:       1.75rem;
 
-// $modal-title-line-height:           $line-height-base;
+// $modal-title-line-height:           $line-height-reportesEstadisticos;
 
 // $modal-content-color:               unset;
 // $modal-content-bg:                  $white;
@@ -1345,7 +1345,7 @@
 
 // scss-docs-start progress-variables
 // $progress-height:                   1rem;
-// $progress-font-size:                $font-size-base * .75;
+// $progress-font-size:                $font-size-reportesEstadisticos * .75;
 // $progress-bg:                       $gray-200;
 // $progress-border-radius:            $border-radius;
 // $progress-box-shadow:               $box-shadow-inset;
@@ -1410,8 +1410,8 @@
 // $header-disabled-color:         $disabled-dark;
 
 // Compute the header-brand padding-y so the header-brand will have the same height as header-text and nav-link
-// $nav-link-height:               $font-size-base * $line-height-base + $nav-link-padding-y * 2;
-// $header-brand-height:           $header-brand-font-size * $line-height-base;
+// $nav-link-height:               $font-size-reportesEstadisticos * $line-height-reportesEstadisticos + $nav-link-padding-y * 2;
+// $header-brand-height:           $header-brand-font-size * $line-height-reportesEstadisticos;
 // $header-brand-padding-y:        ($nav-link-height - $header-brand-height) / 2;
 // $header-brand-margin-end:       1rem;
 // $header-brand-font-size:        $font-size-lg;
@@ -1532,7 +1532,7 @@
 // $sidebar-padding-y:                        0;
 // $sidebar-padding-x:                        0;
 // $sidebar-color:                            $high-emphasis-light;
-// $sidebar-bg:                               $gray-base;
+// $sidebar-bg:                               $gray-reportesEstadisticos;
 // $sidebar-border-width:                     0;
 // $sidebar-border-color:                     transparent;
 // $sidebar-transition:                       margin-left .15s, margin-right .15s, box-shadow .075s, transform .15s, width .15s, z-index 0s ease .15s;

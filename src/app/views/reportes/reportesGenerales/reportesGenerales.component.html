@@ -1,20 +1,21 @@
 <h3 align="center">REPORTES GENERALES</h3>
-<button class="btn btn-primary" (click)="exportExcel()">Exportar a Excel</button>
+<button  class="btn btn-primary" onclick="Exporter.export(tabla, 'reporte.xls', 'Reporte')">Exportar a Excel</button>
+<button style="margin-left: 10px" class="btn btn-primary" onclick="Exporter.export(tabla, 'reporte.csv', 'Reporte')">Exportar a CSV</button>
 <hr>
-
 <div>
   Seleccione la tabla para adicionar al reporte:
-  <form #formulario="ngForm" (ngSubmit)="llenarTabla(datos,'excelDataTable')">
+  <form (ngSubmit)="llenarTabla(datos,'tabla')">
     <select name="miselect" (ngModelChange)="Consultar($event)" [(ngModel)]="name">
     <option [value]="item" *ngFor="let item of lista">{{item}}</option>
     </select>
-     <button class="btn btn-warning" type="submit"> ENVIAR</button>
-      <button class="btn btn-danger" (click)="vaciarTabla()"> ELIMINAR</button>
+      <button style="margin-left: 10px" class="btn btn-warning" type="submit">AGREGAR</button>
+      <button style="margin-left: 10px" class="btn btn-danger" (click)="vaciarTabla()">LIMPIAR</button>
   </form>
-
 </div>
-
-
-<div class="container">
-  <table id="excelDataTable" class="table table-hover table-bordered table-dark"></table>
+<div class="container" id="tablas">
+  <input type="text" class="form-control pull-right" style="width:50%" id="search" placeholder="Buscar...">
+  <table id="tabla" class="table table-hover table-bordered table-dark">
+    <thead></thead>
+    <tbody></tbody>
+  </table>
 </div>
