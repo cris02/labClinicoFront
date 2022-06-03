@@ -1,14 +1,32 @@
-<h2>Angular Date Range Picker Demo</h2>
-<mat-form-field appearance="legacy">
-  <mat-label>Choose Date Range</mat-label>
-  <mat-date-range-input [rangePicker]="picker" [formGroup]="dateRange">
-    <input matStartDate formControlName="start" placeholder="Start Date">
-    <input matEndDate formControlName="end" placeholder="End Date">
-  </mat-date-range-input>
-  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-date-range-picker #picker></mat-date-range-picker>
-</mat-form-field>
-<h2>
-  Start: {{dateRange.value.start | date}}
-  End: {{dateRange.value.end | date}}
-</h2>
+<h2>REPORTES POR FECHA</h2>
+<div>
+  <mat-form-field appearance="legacy">
+    <mat-label>Seleccione el rango de fechas</mat-label>
+    <mat-date-range-input [rangePicker]="picker" [formGroup]="dateRange">
+      <input matStartDate formControlName="start" placeholder="Inicio">
+      <input matEndDate formControlName="end" placeholder="Final">
+    </mat-date-range-input>
+     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
+  <button class="btn btn-warning" (click)="Obtener(dateRange.value.start,dateRange.value.end)">Consultar</button>
+</div>
+
+
+<div>
+  <table class="table table-hover table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <td>Area</td>
+        <td>Cantidad de examenes realizados</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let area of datos">
+        <td>{{area.nombre}}</td>
+        <td>{{area.cantidad}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

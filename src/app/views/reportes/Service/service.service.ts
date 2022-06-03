@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Dato} from "../Modelo/Dato";
 import {TipeoSangre} from "../Modelo/TablaTipeoSangre";
 import {TrigliceridosAltos} from "../Modelo/TablaTrigliceridosAltos";
+import {ExamenesFecha} from "../Modelo/TablaExamenesPorFecha";
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,7 @@ export class ServiceService {
   UrlG='http://127.0.0.1:8000/facturas/';
   UrlTipeo='';
   UrlTrigliceridos='';
+  UrlExamenesFechas='';
 
   getReporte(param: string){
     return this.http.get<Dato[]>(this.UrlG+param.toLowerCase()+'/');
@@ -27,6 +29,9 @@ export class ServiceService {
   return this.http.get<TipeoSangre[]>(this.UrlTipeo);
   }
 
+    getReportePorFecha(ini: string,fin:string){
+    return this.http.get<ExamenesFecha[]>(this.UrlExamenesFechas+'/'+ini+'/'+fin+'/');
+  }
 
   // @ts-ignore
   public loadScript({id, url}) {
