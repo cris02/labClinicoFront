@@ -6,9 +6,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {FormsModule} from "@angular/forms";
 import {ServiceService} from "./views/reportes/Service/service.service";
 import {HttpClientModule} from "@angular/common/http";
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatNativeDateModule } from '@angular/material/core';
 
 import {
   PERFECT_SCROLLBAR_CONFIG,
@@ -98,10 +95,7 @@ const APP_CONTAINERS = [
     CardModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatNativeDateModule,
+    ReactiveFormsModule
   ],
   providers: [
     {

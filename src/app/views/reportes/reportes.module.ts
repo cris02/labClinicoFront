@@ -1,5 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
 
 // views
 import { ReportesGeneralesComponent } from './reportesGenerales/reportesGenerales.component';
@@ -23,6 +26,9 @@ import { ReportesEstadisticosComponent } from './reportesEstadisticos/reportesEs
     ReportesRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
   ],
   declarations: [
     ReportesGeneralesComponent,
@@ -34,6 +40,7 @@ import { ReportesEstadisticosComponent } from './reportesEstadisticos/reportesEs
     ExamenesPorFechaComponent,
     ExamenesZonaGeograficaComponent,
     ReportesEstadisticosComponent,
+
 
   ],
 })
