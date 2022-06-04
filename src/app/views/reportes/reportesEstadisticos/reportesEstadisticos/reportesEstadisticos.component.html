@@ -3,7 +3,7 @@
 <div>
   Seleccione el reporte:
   <form  (ngSubmit)="navegar(name)">
-    <select name="miselect"  [(ngModel)]="name">
+    <select name="miselect"  [(ngModel)]="name" class="form">
     <option [value]="item" *ngFor="let item of lista">{{item}}</option>
     </select>
       <button style="margin-left: 10px" class="btn btn-warning" type="submit">CONSULTAR</button>

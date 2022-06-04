@@ -3,7 +3,9 @@ import {HttpClient} from "@angular/common/http";
 import {Dato} from "../Modelo/Dato";
 import {TipeoSangre} from "../Modelo/TablaTipeoSangre";
 import {TrigliceridosAltos} from "../Modelo/TablaTrigliceridosAltos";
-import {ExamenesFecha} from "../Modelo/TablaExamenesPorFecha";
+import {ExamenesArea} from "../Modelo/TablaExamenesPorFecha";
+import {ExamenesZona} from "../Modelo/TablaExamenesZona";
+import {TipoExamenes} from "../Modelo/TablaTipoExamenes";
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +18,9 @@ export class ServiceService {
   UrlTipeo='';
   UrlTrigliceridos='';
   UrlExamenesFechas='';
+  UrlExamenesPorArea='';
+  UrlExamenesPorZona='';
+  UrlTipoExamenes='';
 
   getReporte(param: string){
     return this.http.get<Dato[]>(this.UrlG+param.toLowerCase()+'/');
@@ -30,7 +35,19 @@ export class ServiceService {
   }
 
     getReportePorFecha(ini: string,fin:string){
-    return this.http.get<ExamenesFecha[]>(this.UrlExamenesFechas+'/'+ini+'/'+fin+'/');
+    return this.http.get<ExamenesArea[]>(this.UrlExamenesFechas+'/'+ini+'/'+fin+'/');
+  }
+
+    getReporteExamenesPorArea(){
+    return this.http.get<ExamenesArea[]>(this.UrlExamenesPorArea);
+  }
+
+   getReporteExamenesPorZona(){
+    return this.http.get<ExamenesZona[]>(this.UrlExamenesPorZona);
+  }
+
+   getReporteTipoExamenes(){
+    return this.http.get<TipoExamenes[]>(this.UrlTipoExamenes);
   }
 
   // @ts-ignore

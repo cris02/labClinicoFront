@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import {ServiceService} from "../../Service/service.service";
 import {Router} from "@angular/router";
-import {ExamenesFecha} from "../../Modelo/TablaExamenesPorFecha";
+import {ExamenesArea} from "../../Modelo/TablaExamenesPorFecha";
 
 @Component({
   selector: 'app-examenes-por-fecha',
@@ -16,11 +16,26 @@ export class ExamenesPorFechaComponent implements OnInit {
     end: new FormControl()
   });
   // @ts-ignore
-  datos:ExamenesFecha[];
+  datos:ExamenesArea[];
 
   constructor(private service:ServiceService,private router:Router) { }
 
   ngOnInit(): void {
+    this.service.loadScript({id: 'my-script', url : 'assets/js/export.js'})
+            .then(data => {
+                console.log('script loaded ', data);
+            }).catch(error => console.log(error));
+
+    this.service.loadScript({id: 'my-script', url : 'assets/js/export.min.js'})
+            .then(data => {
+                console.log('script loaded ', data);
+            }).catch(error => console.log(error));
+
+    this.service.loadScript({id: 'my-script', url : 'assets/js/filtro.js'})
+            .then(data => {
+                console.log('script loaded ', data);
+            }).catch(error => console.log(error));
+
   }
 
   Obtener(a:Date,b:Date){

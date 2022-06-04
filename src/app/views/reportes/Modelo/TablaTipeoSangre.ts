@@ -2,9 +2,9 @@ export class TipeoSangre {
   // @ts-ignore
   id_pais: string;
   // @ts-ignore
-  id_depto: number;
+  id_depto: string;
   // @ts-ignore
-  id_municipio: number;
+  id_municipio: string;
   // @ts-ignore
   tipoA: number;
   // @ts-ignore

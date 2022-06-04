@@ -1,1 +1,21 @@
-<p>examenes-por-area works!</p>
+<h2>REPORTE DE LOS EXAMENES REALIZADOS EN LAS DIFERENTES AREAS</h2>
+<button  class="btn btn-primary" onclick="Exporter.export(tabla, 'reporte.xls', 'Reporte')">Exportar a Excel</button>
+<button style="margin-left: 10px" class="btn btn-primary" onclick="Exporter.export(tabla, 'reporte.csv', 'Reporte')">Exportar a CSV</button>
+<hr>
+<div class="container">
+  <input type="text" class="form-control pull-right" style="width:50%" id="search" placeholder="Buscar...">
+  <table id="tabla" class="table table-hover table-bordered">
+    <thead class="table-dark cab">
+      <tr class="cab">
+        <td>Area</td>
+        <td>Cantidad de examenes realizados</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let area of datos">
+        <td>{{area.nombre}}</td>
+        <td>{{area.cantidad}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,1 +1,23 @@
-<p>examenes-zona-geografica works!</p>
+<h2>ESTADISTICA DE LOS EXAMENES REALIZADOS A NIVEL DE DEPARTAMENTO Y MUNICIPIO</h2>
+<button  class="btn btn-primary" onclick="Exporter.export(tabla, 'reporte.xls', 'Reporte')">Exportar a Excel</button>
+<button style="margin-left: 10px" class="btn btn-primary" onclick="Exporter.export(tabla, 'reporte.csv', 'Reporte')">Exportar a CSV</button>
+<hr>
+<div class="container">
+  <input type="text" class="form-control pull-right" style="width:50%" id="search" placeholder="Buscar...">
+  <table id="tabla" class="table table-hover table-bordered">
+    <thead class="table-dark cab">
+      <tr class="cab">
+        <td>Departamento</td>
+        <td>Municipio</td>
+        <td>Cantidad</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let zona of datos">
+        <td>{{zona.departamento}}</td>
+        <td>{{zona.municipio}}</td>
+        <td>{{zona.cantidad}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
