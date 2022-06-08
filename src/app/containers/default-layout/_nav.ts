@@ -30,6 +30,18 @@ export const navItems: INavData[] = [
     ]
   },
   {
+    name: 'Catalogos',
+    url: '/catalogos',
+    iconComponent: { name: 'cil-puzzle' },
+    children: [
+      {
+        name: 'Gestion Clinica',
+        url: '/catalogos/clinica'
+      },
+
+    ]
+  },
+  {
     name: 'Menu 2',
     url: '/buttons',
     iconComponent: { name: 'cil-cursor' },

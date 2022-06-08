@@ -7,6 +7,9 @@ import {FormsModule} from "@angular/forms";
 import {ServiceService} from "./views/reportes/Service/service.service";
 import {HttpClientModule} from "@angular/common/http";
 
+// primeNg
+import { PrimeNgModule } from './prime-ng/prime-ng.module';
+
 import {
   PERFECT_SCROLLBAR_CONFIG,
   PerfectScrollbarConfigInterface,
@@ -95,7 +98,8 @@ const APP_CONTAINERS = [
     CardModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PrimeNgModule
   ],
   providers: [
     {
