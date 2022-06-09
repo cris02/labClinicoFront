@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClinicaComponent } from './clinica/clinica.component';
+import { PaisFormUpdateComponent } from './componentes/pais-form-update/pais-form-update.component';
 import { PaisFormComponent } from './componentes/pais-form/pais-form.component';
 import { PaisComponent } from './pais/pais.component';
 
@@ -19,7 +20,7 @@ const routes: Routes = [
           path: 'clinica',
           component: ClinicaComponent,
           data: {
-            title: 'Clinica',
+            title: 'clinica',
           },
         },
         {
@@ -33,7 +34,14 @@ const routes: Routes = [
           path: 'paises/form',
           component: PaisFormComponent,
           data: {
-            title: 'formulario',
+            title: 'registrar',
+          },
+        },
+        {
+          path: 'paises/update/:id',
+          component: PaisFormUpdateComponent,
+          data: {
+            title: 'actualizar',
           },
         },
       ]

@@ -12,7 +12,7 @@ import { PaisResponse } from '../modelos/pais-model';
 
 export class PaisSerService {
 
-  private url: string = 'http://localhost:8080/pais';
+  private url: string = 'http://localhost:8082/pais';
   private httpHeader = new HttpHeaders({'Content-Type': 'application/json'});
 
   constructor(private http: HttpClient, private router: Router) { }
@@ -28,6 +28,14 @@ export class PaisSerService {
 
   //crear un nuevo pais
   crear(pais: PaisResponse): Observable<PaisResponse> {
-    return this.http.post<PaisResponse>(this.url, pais, {headers: this.httpHeader});
+    return this.http.post<PaisResponse>(this.url+'/save', pais, {headers: this.httpHeader});
+  }
+
+  getPais(id: number): Observable<PaisResponse> {
+    return this.http.get<PaisResponse>(`${this.url}/find/${id}`);
+  }
+
+  actualizarPais(pais: PaisResponse): Observable<PaisResponse> {
+    return this.http.put<PaisResponse>(`${this.url}/upd/${pais.idPais}`, pais, {headers: this.httpHeader});
   }
 }
