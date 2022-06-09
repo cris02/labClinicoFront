@@ -28,10 +28,7 @@ export class DetallePacienteComponent implements OnInit {
   ngOnInit(): void {
     this.getPaciente();
     this.getOrdenesT();
-    this.getExamenesCop();
-    this.getExamenesHem();
-    this.getExamenesQui();
-    this.getExamenesUri();
+    this.getExamenesP();
   }
 
   getPaciente(): void {
@@ -49,25 +46,10 @@ export class DetallePacienteComponent implements OnInit {
       .subscribe(data => this.ordenes = data);
   }
 
-  getExamenesCop() {
+  getExamenesP() {
 
     this.service.getExamenesP(this.idp).subscribe(data => this.exa = data);
 
-  }
-
-    getExamenesHem(){
-        // @ts-ignore
-      this.service.getExamenesHem().subscribe(data => this.hem= data);
-  }
-
-      getExamenesQui(){
-        // @ts-ignore
-      this.service.getExamenesQui().subscribe(data => this.qui = data);
-  }
-
-      getExamenesUri(){
-        // @ts-ignore
-      this.service.getExamenesUri().subscribe(data => this.uri = data);
   }
 
 

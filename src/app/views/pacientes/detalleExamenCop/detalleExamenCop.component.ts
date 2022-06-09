@@ -20,11 +20,9 @@ export class DetalleExamenCopComponent implements OnInit {
             .then(data => {
                 console.log('script loaded ', data);
             }).catch(error => console.log(error));
-
-
-
     this.getExamen();
   }
+
 
     getExamen(): void {
     // @ts-ignore
@@ -33,7 +31,7 @@ export class DetalleExamenCopComponent implements OnInit {
       const id2 = +this.route.snapshot.paramMap.get('id2');
 
     // @ts-ignore
-      this.service.getDetalleExamenCop(id1,id2).subscribe(data => this.cop = JSON.parse(data));
+      this.service.getDetalleExamenCop(1,1).subscribe(data => this.cop = data);
   }
 
   imprimir(){

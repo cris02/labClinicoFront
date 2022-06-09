@@ -17,7 +17,7 @@ export class ServiceService {
   constructor(private http:HttpClient) { }
 
   UrlListado='http://localhost:8082/paciente/all';
-  UrlPaciente='http://localhost:8082/paciente/';
+  UrlPaciente='http://localhost:8082/paciente/find?id=';
   UrlOrdenes='http://localhost:8082/orden/findPaciente?id=';
   UrlExamenesP='http://localhost:8082/orden/listarExamen/';
   UrlExamenCop='http://localhost:8082/examen/cpl/find?o=';

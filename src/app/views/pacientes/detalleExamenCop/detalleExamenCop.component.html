@@ -1,6 +1,6 @@
   <button  class="btn btn-primary" (click)="imprimir()">Exportar a PDF</button>
 <div id="content">
-  {{cop}}
+{{cop|json}}
 <ng-container *ngFor="let pac of cop">
   <h2>Examen de coprologia</h2>
 <hr>
