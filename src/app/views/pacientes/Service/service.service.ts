@@ -16,14 +16,14 @@ export class ServiceService {
 
   constructor(private http:HttpClient) { }
 
-  UrlListado='http://localhost:8082/paciente/all';
-  UrlPaciente='http://localhost:8082/paciente/find?id=';
-  UrlOrdenes='http://localhost:8082/orden/findPaciente?id=';
-  UrlExamenesP='http://localhost:8082/orden/listarExamen/';
-  UrlExamenCop='http://localhost:8082/examen/cpl/find?o=';
-  UrlExamenHma='http://localhost:8082/examen/hma/find?o=';
-  UrlExamenQcl='http://localhost:8082/examen/qcl/find?o=';
-  UrlExamenUri='http://localhost:8082/examen/uri/find?o=';
+  UrlListado='http://34.136.131.246:8082/paciente/all';
+  UrlPaciente='http://34.136.131.246:8082/paciente/find?id=';
+  UrlOrdenes='http://34.136.131.246:8082/orden/findPaciente?id=';
+  UrlExamenesP='http://34.136.131.246:8082/orden/listarExamen/';
+  UrlExamenCop='http://34.136.131.246:8082/examen/cpl/find?o=';
+  UrlExamenHma='http://34.136.131.246:8082/examen/hma/find?o=';
+  UrlExamenQcl='http://34.136.131.246:8082/examen/qcl/find?o=';
+  UrlExamenUri='http://34.136.131.246:8082/examen/uri/find?o=';
 
   getListadoPacientes(){
     return this.http.get<Paciente[]>(this.UrlListado);

@@ -14,7 +14,7 @@ export class ServiceService {
 
   constructor(private http:HttpClient) { }
 
-  UrlG='http://localhost:8080/';
+  UrlG='http://34.136.131.246:8082';
   UrlTipeo='';
   UrlTrigliceridos='';
   UrlExamenesFechas='';
