@@ -12,7 +12,7 @@ import { PaisResponse } from '../modelos/pais-model';
 
 export class PaisSerService {
 
-  private url: string = 'http://localhost:8082/pais';
+  private url: string = 'http://34.136.131.246:8082/pais';
   private httpHeader = new HttpHeaders({'Content-Type': 'application/json'});
 
   constructor(private http: HttpClient, private router: Router) { }
@@ -37,5 +37,9 @@ export class PaisSerService {
 
   actualizarPais(pais: PaisResponse): Observable<PaisResponse> {
     return this.http.put<PaisResponse>(`${this.url}/upd/${pais.idPais}`, pais, {headers: this.httpHeader});
+  }
+
+  deleteCliente(id: number): Observable<PaisResponse> {
+    return this.http.delete<PaisResponse>(`${this.url}/del/${id}`, {headers: this.httpHeader});
   }
 }
