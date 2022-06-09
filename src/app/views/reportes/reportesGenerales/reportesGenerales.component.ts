@@ -15,7 +15,9 @@ import * as $ from 'jquery';
 export class ReportesGeneralesComponent implements OnInit {
   // @ts-ignore
   name:string;
-  lista:string[]=["Pais","Departamento","facturasp","pais/all"];
+  lista:string[]=["clinica/all","area/all",
+    "paciente/all","usuario/all","orden/all","pais/all","rangos/all","vref/all","pais/all","examen/cpl"
+    ,"opcionmenu","rol/all","examen/cpl","tipodocumento/all"];
   // @ts-ignore
   datos: Dato[];
   contador=0;

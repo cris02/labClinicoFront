@@ -14,7 +14,7 @@ export class ServiceService {
 
   constructor(private http:HttpClient) { }
 
-  UrlG='http://34.136.131.246:8082';
+  UrlG='http://34.136.131.246:8082/';
   UrlTipeo='';
   UrlTrigliceridos='';
   UrlExamenesFechas='';
@@ -23,7 +23,7 @@ export class ServiceService {
   UrlTipoExamenes='';
 
   getReporte(param: string){
-    return this.http.get<Dato[]>(this.UrlG+param.toLowerCase()+'/');
+    return this.http.get<Dato[]>(this.UrlG+param.toLowerCase());
   }
 
   getPersonasTrigliceridosAltos(){
