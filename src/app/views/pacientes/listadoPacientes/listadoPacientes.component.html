@@ -1,0 +1,23 @@
+<h2>LISTADO DE PACIENTES EN LA CLINICA</h2>
+<hr>
+<div class="container">
+  <input type="text" class="form-control pull-right" style="width:50%" id="search" placeholder="Buscar...">
+  <table id="tabla" class="table table-hover">
+    <thead class="cab table-dark">
+      <tr class="cab">
+        <td>Nombre</td>
+        <td>Apellido</td>
+        <td>DUI</td>
+        <td>Accion</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let paciente of datos">
+        <td>{{paciente.nomPaciente}}</td>
+        <td>{{paciente.apePaciente}}</td>
+        <td>{{paciente.numDocumento}}</td>
+        <td> <a class="btn btn-primary" routerLink="/pacientes/detallePaciente/{{paciente.idPaciente}}/">Ver Historial</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

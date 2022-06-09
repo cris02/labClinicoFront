@@ -51,8 +51,9 @@ const routes: Routes = [
       {
         path: 'pacientes',
         loadChildren: () =>
-          import('./views/pacientes/pacientes.module')
-      }
+          import('./views/pacientes/pacientes.module').then((m) => m.PacientesModule)
+      },
+
     ]
   },
   {

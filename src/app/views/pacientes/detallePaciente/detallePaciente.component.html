@@ -1,0 +1,85 @@
+<h2>Este es el detalle del paciente ID:{{idp}} </h2>
+{{paciente}}
+
+<ng-container *ngFor="let pac of paciente">
+
+
+  <c-row>
+    <c-col xs="12">
+    </c-col>
+    <c-col xs="12" lg="6">
+      <c-card class="mb-4">
+        <c-card-header>
+          Informacion personal del paciente
+        </c-card-header>
+        <c-card-body>
+          <p>Nombre:{{pac.nomPaciente}}</p>
+          <p>Apellido:{{pac.apePaciente}}</p>
+          <p>Fecha Nacimiento:{{pac.fechanacimiento}}</p>
+          <p>Telefono:{{pac.telPaciente}}</p>
+          <p>Documento de ID:{{pac.numDocumento}}</p>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col xs="12" lg="6">
+      <c-card class="mb-4">
+        <c-card-header>
+          Informacion de contacto
+        </c-card-header>
+        <c-card-body>
+          <p>Nombre:{{pac.nomRespondable}}</p>
+          <p>Telefono :{{pac.telResponsable}}</p>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+
+</ng-container>
+
+<hr>
+<H2>Examenes realizados</H2>
+<hr>
+<div class="container">
+  <input type="text" class="form-control pull-right" style="width:50%" id="search" placeholder="Buscar...">
+  <table id="tabla" class="table table-hover">
+    <thead class="cab table-dark">
+      <tr class="cab">
+        <td>Tipo</td>
+        <td>Fecha Recepcion Muestra</td>
+        <td>Accion</td>
+      </tr>
+    </thead>
+    <tbody>
+    <ng-container >
+      <ng-container *ngFor="let examenes of exa">
+      <tr *ngIf="examenes.tipo==1">
+        <td>Coprologia</td>
+        <td></td>
+        <td><a class="btn btn-primary" routerLink="/pacientes/detalleExamenCop/{{examenes.idOrdenexamen}}/{{examenes.idExam}}">Ver Detalle</a></td>
+      </tr>
+      </ng-container>
+            <ng-container *ngFor="let examenes of exa">
+      <tr *ngIf="examenes.tipo==2">
+        <td>Urianalisis</td>
+        <td></td>
+        <td><a class="btn btn-primary" routerLink="/pacientes/detalleExamenUri/{{examenes.idOrdenexamen}}/{{examenes.idExam}}">Ver Detalle</a></td>
+      </tr>
+      </ng-container>
+           <ng-container *ngFor="let examenes of exa">
+      <tr *ngIf="examenes.tipo==3">
+        <td>Hematologia</td>
+        <td></td>
+        <td><a class="btn btn-primary" routerLink="/pacientes/detalleExamenHem/{{examenes.idOrdenexamen}}/{{examenes.idExam}}">Ver Detalle</a></td>
+      </tr>
+      </ng-container>
+            <ng-container *ngFor="let examenes of exa">
+      <tr *ngIf="examenes.tipo==4">
+        <td>Quimica Clinica</td>
+        <td></td>
+        <td><a class="btn btn-primary" routerLink="/pacientes/detalleExamenQui/{{examenes.idOrdenexamen}}/{{examenes.idExam}}">Ver Detalle</a></td>
+      </tr>
+      </ng-container>
+    </ng-container>
+    </tbody>
+  </table>
+</div>
