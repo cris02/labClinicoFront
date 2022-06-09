@@ -1,0 +1,35 @@
+<div class="card bg-dark text-white">
+    <div class="card-header">
+        {{ titulo }}
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="form-group row">
+                <label for="idPais" class="form-group-label col-sm-2">Id Pais</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)]="pais.idPais" name="idPais" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="nomPais" class="form-group-label col-sm-2">Nombre</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)]="pais.nomPais" name="nomPais" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="idIso2" class="form-group-label col-sm-2">Codigo iso</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)]="pais.idIso2" name="idIso2" />
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-sm-6">
+                    <button (click)="create()" class="btn btn-primary">Crear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

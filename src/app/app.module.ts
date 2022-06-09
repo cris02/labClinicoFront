@@ -99,7 +99,7 @@ const APP_CONTAINERS = [
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    PrimeNgModule
+    PrimeNgModule,
   ],
   providers: [
     {
