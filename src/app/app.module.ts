@@ -51,11 +51,6 @@ import {
 } from '@coreui/angular';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
-import { ReportesGeneralesComponent } from './views/reportes/reportesGenerales/reportesGenerales.component';
-import { PacientesComponent } from './views/pacientes/pacientes.component';
-import {
-  ExamenesPorFechaComponent
-} from "./views/reportes/reportesEstadisticos/examenes-por-fecha/examenes-por-fecha.component";
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,

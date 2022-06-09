@@ -1,0 +1,40 @@
+  <button  class="btn btn-primary" (click)="imprimir()">Exportar a PDF</button>
+<div id="content">
+{{cop|json}}
+<ng-container *ngFor="let pac of cop">
+  <h2>Examen de coprologia</h2>
+<hr>
+  <c-row>
+    <c-col xs="12">
+    </c-col>
+    <c-col xs="12" lg="6">
+      <c-card class="mb-4">
+        <c-card-header>
+          Observacion Macroscopica
+        </c-card-header>
+        <c-card-body>
+          <p>Color:{{pac.colorheces}}</p>
+          <p>Consistencia:{{pac.consistencia}}</p>
+          <p>Mucus:{{pac.precenciademucus}}</p>
+          <p>Sangre:{{pac.sangre}}</p>
+          <p>Restos Alimenticios:{{pac.restoAlimenticio}}</p>
+          <p>Parasitos Larvarios:{{pac.parasitosLarvario}}</p>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col xs="12" lg="6">
+      <c-card class="mb-4">
+        <c-card-header>
+          Leucocitos
+        </c-card-header>
+        <c-card-body>
+          <p>Polimorfonucleares:{{pac.porcPolimorfonucleares}}</p>
+          <p>Mononucleares :{{pac.porcMononucleares}}</p>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  </ng-container>
+
+<hr>
+</div>

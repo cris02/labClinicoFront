@@ -56,16 +56,16 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Pacientes',
-    //url: '/pacientes',
+    url: '/pacientes',
     iconComponent: { name: 'cil-notes' },
     children: [
       {
         name: 'Registro de pacientes',
-        url: '/pacientes'
+        url: '/pacientes/listadoPacientes'
       },
       {
         name: 'Opcion 2',
-        url: '/pacientes'
+        url: '/pacientes/detallePaciente/1/'
       }
     ]
   },
